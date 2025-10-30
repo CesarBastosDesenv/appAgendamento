@@ -1,6 +1,7 @@
 import { router } from "expo-router";
 import { KeyboardAvoidingView, Platform, Text, TouchableOpacity, View } from "react-native";
 import { useAuth } from "../../authContext";
+import { styles } from "../login/style";
 
 export default function Login() {
   const { login } = useAuth();
@@ -24,7 +25,7 @@ export default function Login() {
       }}
     >
       <Text style={{ color: "#fff", fontSize: 22, marginBottom: 20 }}>
-        Login do App
+        Login teste
       </Text>
 
       <TouchableOpacity
@@ -38,6 +39,10 @@ export default function Login() {
       >
         <Text style={{ fontWeight: "bold", color: "#000" }}>Entrar</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={handleLogin}>
+              <Text style={styles.textButton}>Entrar</Text>
+      </TouchableOpacity>
+      <Text style={styles.textCadastro}>Ainda não tem seu cadastro?</Text>
 
       <TouchableOpacity
         style={{ marginTop: 25 }}
