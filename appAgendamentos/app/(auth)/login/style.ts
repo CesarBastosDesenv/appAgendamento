@@ -61,9 +61,14 @@ export const styles = StyleSheet.create({
    },
    textCadastro:{
     fontSize:16,
-    color: '#fcf8f8ff',
+    color: '#2E2E2E',
     fontWeight:'bold',
-    marginTop: 30
+    marginTop: 30,
+   },
+   textCadastroEmail:{
+    fontSize:16,
+    color: '#2E2E2E',
+    fontWeight:'bold',
    },
    link:{
     fontSize:16,

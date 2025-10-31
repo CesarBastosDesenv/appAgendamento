@@ -24,7 +24,7 @@ export default function TabsLayout() {
           tabBarIcon: ({ color, size }) => {
             let iconName: keyof typeof Ionicons.glyphMap;
             switch (route.name) {
-              case "home":
+              case "(tabs)/home":
                 iconName = "home-outline";
                 break;
               case "agendamento":
@@ -43,7 +43,7 @@ export default function TabsLayout() {
           },
         })}
       >
-        <Tabs.Screen name="home" options={{ title: "Home" }} />
+        <Tabs.Screen name="(tabs)/home/" options={{ title: "Home" }} />
         <Tabs.Screen name="agendamento" options={{ title: "Agendamento" }} />
         <Tabs.Screen name="avaliacao" options={{ title: "Avaliação" }} />
         <Tabs.Screen name="barbeiro" options={{ title: "Barbeiro" }} />
