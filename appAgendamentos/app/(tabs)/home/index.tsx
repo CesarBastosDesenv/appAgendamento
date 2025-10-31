@@ -1,4 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "../../(tabs)/home/style";
@@ -9,6 +10,12 @@ import { styles } from "../../(tabs)/home/style";
 export default function Home() {
 
   const [location, setLocation ] = useState("");
+
+   const handleBarbeiro = async () => {
+      
+      router.replace("/(tabs)/barbeiro");
+  
+    };
 
   const barbers = [
   {
@@ -42,8 +49,10 @@ export default function Home() {
         Encontre o seu{"\n"}barbeiro favorito
       </Text>
 
+    
+
       {/* Botão à direita */}
-      <TouchableOpacity onPress={() => console.log("Botão clicado!")}>
+      <TouchableOpacity onPress={handleBarbeiro}>
         <Ionicons name="search-outline" size={26} color="#2E2E2E" />
       </TouchableOpacity>
    </View >
@@ -71,8 +80,16 @@ export default function Home() {
                <Text style={styles.name}>{barber.name}</Text>
                <Text style={styles.address}>{barber.address}</Text>
    
-               <TouchableOpacity style={styles.button} onPress={() => console.log(`Agendar com ${barber.name}`)}>
-                 <Text style={styles.buttonText}>Agendar</Text>
+               <TouchableOpacity
+                      style={styles.button}
+                      onPress={() =>
+                        router.push({
+                          pathname: "/(tabs)/barbeiro",
+                          params: { name: barber.name }, // 👈 enviando o nome do barbeiro
+                        })
+                      }
+                    >
+                   <Text style={styles.buttonText}>Ver Perfil</Text>
                </TouchableOpacity>
              </View>
            </View>

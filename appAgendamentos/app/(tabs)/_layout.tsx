@@ -20,7 +20,7 @@ export default function TabsLayout() {
               iconName = "calendar-outline";
               break;
             case "avaliacao/index":
-              iconName = "star-outline";
+              iconName = "list-outline";
               break;
             case "barbeiro/index":
               iconName = "cut-outline";
