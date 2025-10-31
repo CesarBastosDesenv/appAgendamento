@@ -19,7 +19,7 @@ export default function TabsLayout() {
             case "agendamento/index":
               iconName = "calendar-outline";
               break;
-            case "avaliacao/index":
+            case "atendimentos/index":
               iconName = "list-outline";
               break;
             case "barbeiro/index":
@@ -48,7 +48,7 @@ export default function TabsLayout() {
       >
         <Tabs.Screen name="home/index" options={{ title: "Home" }} />
         <Tabs.Screen name="agendamento/index" options={{ title: "Agendamento" }} />
-        <Tabs.Screen name="avaliacao/index" options={{ title: "Avaliação" }} />
+        <Tabs.Screen name="atendimentos/index" options={{ title: "Atendimentos" }} />
         <Tabs.Screen name="barbeiro/index" options={{ title: "Barbeiro" }} />
       </Tabs>
     </SafeAreaView>
