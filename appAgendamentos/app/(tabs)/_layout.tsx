@@ -50,6 +50,13 @@ export default function TabsLayout() {
         <Tabs.Screen name="agendamento/index" options={{ title: "Agendamento" }} />
         <Tabs.Screen name="atendimentos/index" options={{ title: "Atendimentos" }} />
         <Tabs.Screen name="barbeiro/index" options={{ title: "Barbeiro" }} />
+         <Tabs.Screen
+          name="servicos/index"
+          options={{
+            href: null, // não aparece no menu
+           
+          }}
+        />
       </Tabs>
     </SafeAreaView>
   );

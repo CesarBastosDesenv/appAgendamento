@@ -84,7 +84,7 @@ export default function Home() {
                       style={styles.button}
                       onPress={() =>
                         router.push({
-                          pathname: "/(tabs)/barbeiro",
+                          pathname: "/(tabs)/servicos",
                           params: { name: barber.name }, // 👈 enviando o nome do barbeiro
                         })
                       }
